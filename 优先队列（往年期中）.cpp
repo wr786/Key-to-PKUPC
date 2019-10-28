@@ -32,7 +32,7 @@ int main()
 					heap[i]--;
 					flag=0;
         			Min=i;
-            		break;
+        			break;
 				}
 				if(flag) printf("NULL\n");
 		}
