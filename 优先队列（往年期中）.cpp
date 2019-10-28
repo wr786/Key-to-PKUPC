@@ -31,8 +31,8 @@ int main()
 					printf("%d\n",i);
 					heap[i]--;
 					flag=0;
-          Min=i;
-          break;
+        			Min=i;
+            		break;
 				}
 				if(flag) printf("NULL\n");
 		}
