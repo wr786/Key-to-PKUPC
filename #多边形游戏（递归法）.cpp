@@ -52,11 +52,11 @@ void search(int node_num, int g[]) {
 }
 
 int main() {
-	int n; scanf("%d", &amp;n);
+	int n; scanf("%d", &n);
 	int graph[42], idx = 0;
 	for(int i=1; i<=n; i++) {
 		int tmp; char ctmp;
-		scanf("%d %c", &amp;tmp, &amp;ctmp);
+		scanf("%d %c", &tmp, &ctmp);
 		graph[idx++] = tmp;
 		if(ctmp == '*') graph[idx++] = -786554453;
 		else if(ctmp == '+') graph[idx++] = -19260817;

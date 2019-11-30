@@ -14,7 +14,7 @@ bool fc(string a, string b) {
         if(tmpla > lb) return false; // 特判过长
     }
 	int idxa = 0, idxb = 0;
-	while(idxa < la &amp;&amp; idxb < lb) {
+	while(idxa < la && idxb < lb) {
 		if(a[idxa] == '*') {
             if(idxa == la - 1) return true; // 特判最后一个
 			for(int tmpidxb = idxb; tmpidxb < lb; tmpidxb++) {

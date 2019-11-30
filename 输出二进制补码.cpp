@@ -10,11 +10,11 @@ int read() {
 	int ret = 0, sign = 1;
 	char c = getchar();
 	while(c == ' ' || c == '\n') c = getchar();
-	if('a' <= c &amp;&amp; c <= 'z') {
+	if('a' <= c && c <= 'z') {
 		isEnd = true;
 		return 0;
 	}
-	if('A' <= c &amp;&amp; c <= 'Z') {
+	if('A' <= c && c <= 'Z') {
 		isEnd = true;
 		return 0;
 	}
@@ -22,7 +22,7 @@ int read() {
 		sign = -1;
 		c = getchar();
 	}
-	while('0' <= c &amp;&amp; c <= '9') {
+	while('0' <= c && c <= '9') {
 		ret = ret * 10 + c - '0';
 		c = getchar();
 	}
@@ -55,7 +55,7 @@ int main() {
 				code[i] = 1 - code[i]; // 反转
 			code[31] += 1;
 			int idxend = 31;
-			while(code[idxend] == 2 &amp;&amp; idxend > 0) {
+			while(code[idxend] == 2 && idxend > 0) {
 				code[idxend] = 0;
 				code[--idxend] += 1;
 			}

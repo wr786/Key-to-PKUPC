@@ -26,7 +26,7 @@ void matchbrak(int l ,int r) {
 			return;
 		}
 		// 不然则存在右括号
-		while(p2 >= l &amp;&amp; p2 < r) { // 找出所有右括号打上标记
+		while(p2 >= l && p2 < r) { // 找出所有右括号打上标记
 			brak[p2] = 2; // 代表右括号不匹配
 			p2 = str.find(")", p2+1);
 		}
@@ -34,7 +34,7 @@ void matchbrak(int l ,int r) {
 	}
 	// 不然则存在左括号
 	if(p2 < l || p2 >= r) { // 不存在右括号
-		while(p1 >= l &amp;&amp; p1 < r) {
+		while(p1 >= l && p1 < r) {
 			brak[p1] = 1; // 代表左括号不匹配
 			p1 = antifind('(', p1);
 		}
@@ -43,24 +43,24 @@ void matchbrak(int l ,int r) {
 	// 两者都存在
 	int p1l = str.find("(", l);
 	int p2r = antifind(')', r);
-	while(p2 < p1l &amp;&amp; p2 >= l &amp;&amp; p2 < r) { // 括号逆序
+	while(p2 < p1l && p2 >= l && p2 < r) { // 括号逆序
 		brak[p2] = 2;
 		p2 = str.find(")", p2+1);
 	}
-	while(p1 > p2 &amp;&amp; p1 >= l &amp;&amp; p1 < r) {
+	while(p1 > p2 && p1 >= l && p1 < r) {
 		brak[p1] = 1;
 		p1 = antifind('(', p1);
 	}
-	// if(p2 >= l &amp;&amp; p2 < r) {
+	// if(p2 >= l && p2 < r) {
 	// 	while("寻找最右边的右括号") {
 	// 		int tmp = str.find(")", p2+1);
-	// 		if(tmp >= l &amp;&amp; tmp < r)
+	// 		if(tmp >= l && tmp < r)
 	// 			p2 = tmp;
 	// 		else
 	// 			break;
 	// 	}
 	// }
-	if(p2 >= l &amp;&amp; p2 < r &amp;&amp; p1 >= l &amp;&amp; p1 < r) {
+	if(p2 >= l && p2 < r && p1 >= l && p1 < r) {
 		// matchbrak(0, p1-1);
 		// matchbrak(p1, p2);
 		// matchbrak(p2+1, r);

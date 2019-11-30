@@ -16,7 +16,7 @@ int main() {
 	if(idx1 >= l || idx2 >= l) cout << -1;
 	else {
 		int tmp = idx2;
-		while(tmp <= l &amp;&amp; tmp >= 0) {
+		while(tmp <= l && tmp >= 0) {
 			idx2 = tmp;
 			tmp = s.find(s2, idx2+1);
 		}

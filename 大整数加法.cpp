@@ -18,7 +18,7 @@ string Add(string a, string b) {
 		addDigit = (na + nb + addDigit) / 10;
 	}
     if(addDigit) ret = "1" + ret; // 处理进位
-    while(ret[0] == '0' &amp;&amp; ret.length() > 1) ret = ret.substr(1,l+1); // 去除前导零并且特判0的情况
+    while(ret[0] == '0' && ret.length() > 1) ret = ret.substr(1,l+1); // 去除前导零并且特判0的情况
 	return ret;
 }
 

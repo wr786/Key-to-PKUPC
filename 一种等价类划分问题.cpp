@@ -25,7 +25,7 @@ int getSumOfDigits(int x) {
 }
 
 int main() {
-	int m, n, k; scanf("%d,%d,%d", &amp;m, &amp;n, &amp;k);
+	int m, n, k; scanf("%d,%d,%d", &m, &n, &k);
 	for(int i=m+1; i<n; i++) f[i] = i; // init
 	for(int i=m+1; i<n; i++) {
 		int digitalSum = getSumOfDigits(i);

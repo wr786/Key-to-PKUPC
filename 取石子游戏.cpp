@@ -17,7 +17,7 @@ int search(int turn_player, long long a, long long b) {
 int main() {
 	long long a, b;
 	cin >> a >> b;
-	while(a &amp;&amp; b) {
+	while(a && b) {
 		if(search(1, a, b) == 1)
 			cout << "win" << endl;
 		else
