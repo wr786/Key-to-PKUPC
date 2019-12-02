@@ -1,4 +1,9 @@
-
+/*
+* 程序名：TSP
+* 作者：wr786
+* 编制时间：20191130
+* 功能：TSP
+*/
 #include<iostream>
 #include<cstdio>
 #include<algorithm>
@@ -22,11 +27,26 @@ void search(int node, int costSum, int cities) {
 		}
 }
 
+inline int read() {
+	int ret = 0, sign = 1;
+	char c = getchar();
+	while(c == ' ' || c == '\n') c = getchar();
+	if(c == '-') {
+		sign = -1;
+		c = getchar();
+	}
+	while('0' <= c && c <= '9') {
+		ret = ret * 10 + c - '0';
+		c = getchar();
+	}
+	return sign * ret;
+}
+
 int main() {
-	scanf("%d", &n);
+	n = read();
 	for(int i=1; i<=n; i++)
 		for(int j=1; j<=n; j++)
-			scanf("%d", &cost[i][j]);
+			cost[i][j] = read();
 	// 我打算直接暴力
 	vis[1] = true;
 	search(1, 0, 1); // 考虑到都是无向边，所以选起点好像没有关系
