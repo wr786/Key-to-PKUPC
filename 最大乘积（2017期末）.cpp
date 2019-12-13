@@ -59,7 +59,9 @@ vector<int> frc;
 
 void srch(int n)
 {
+	// ��n=15Ϊ��
 	int sum = 0;
+	// ��һ������ΪҪȡ��ͬ�����С���������ʹ��Ϊn���������һ����������Ϊ1
 	for (int i = 2;; ++i)
 	{
 		sum += i;
@@ -75,11 +77,22 @@ void srch(int n)
 			--i;
 		}
 	}
+	// ��ʱ�õ���2,3,4,6
+	// �ڶ��������һ����͵���ڶ���Ĳ�ֵdiff
 	int diff = frc.back() - frc[frc.size() - 2] - 1;
+	// �����ܰ�diff�ָ�ǰ�����
+	// ���diff�Ƚϴ�����Ը�ǰ�����ÿ���1����ѡ��ʽ����֪������ܿ��Ը��ࣩ
 	if ((int)frc.size() - diff < 0)
 		for (int i = 0; i < frc.size() - 1; ++i)
 		{
 			++frc[i];
+			--frc.back();
+		}
+	// ���diff�Ƚ�С����ֻ�ܸ�������ÿ���1
+	else
+		for (int i = 0; i < diff; ++i)
+		{
+			++frc[frc.size() - 1 - i];
 			--frc.back();
 		}
 	else
